@@ -26,7 +26,7 @@ MOD_CHAT_ID = -1003956485042
 RULES_LINK = "https://t.me/+fVHqaNqB5FwyZWM0"
 COMMENTS_CHAT_ID = -1002679699204 
 
-PUBLISH_INTERVAL = 1200 
+PUBLISH_INTERVAL =  1200 
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
@@ -303,7 +303,7 @@ async def finalize_preview(message, state):
         unis = "\n".join([f"➤ {html.quote(u.strip())}" for u in data['universe'].replace(',', '\n').split('\n') if u.strip()])
         conds = "Не" if data['conditions'].lower() == "нет" else html.quote(data['conditions'])
     
-        custom_footer = " Ꮶᴛᴏ нибудь жᴇᴧᴀᴇᴛ дᴀᴛь ᴇʍу ᴏᴛᴨᴏᴩ ʙ ɸᴏᴩʍᴀᴛᴇ ᴨᴩуɸбᴀᴛᴛᴧ?"
+        custom_footer = " Ꮶᴛᴏ нибудь жᴇᴧᴀᴇᴛ дᴀᴛь ᴇʍу ᴏᴛᴨᴏᴩ ʙ ɸᴏᴩᴍᴀᴛᴇ ᴨᴩуɸбᴀᴛᴛᴧ?"
         
         caption = (
             f"<b>— автор мнения:</b> {author_mention}\n\n"
@@ -390,7 +390,7 @@ async def publish_item(callback: types.CallbackQuery):
     
     try:
         await callback.message.delete()
-        text = f"⏳ Пост от {callback.from_user.first_name} в очереди (3 мин)."
+        text = f"⏳ Пост от {callback.from_user.first_name} в очереди (20 мин)."
         await bot.send_message(MOD_CHAT_ID, text)
     except TelegramBadRequest:
         pass
