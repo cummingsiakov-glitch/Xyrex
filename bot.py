@@ -26,7 +26,7 @@ MOD_CHAT_ID = -1003956485042
 RULES_LINK = "https://t.me/+fVHqaNqB5FwyZWM0"
 COMMENTS_CHAT_ID = -1002679699204 
 
-PUBLISH_INTERVAL = 180 
+PUBLISH_INTERVAL = 1200 
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
